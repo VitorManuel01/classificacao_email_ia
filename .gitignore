@@ -1,0 +1,20 @@
+.env #impedir arquivos de configuração de ambiente de serem versionados
+node_modules/ #ignorar dependências do node
+dist/ #ignorar arquivos de build
+.DS_Store #ignorar arquivos do sistema macOS
+logs/ #ignorar arquivos de log
+*.log #ignorar todos os arquivos de log
+coverage/ #ignorar relatórios de cobertura de testes
+.vscode/ #ignorar configurações do Visual Studio Code
+.idea/ #ignorar configurações do JetBrains IDEs
+*.swp #ignorar arquivos temporários do vim
+npm-debug.log* #ignorar logs de depuração do npm
+yarn-debug.log* #ignorar logs de depuração do yarn
+.venv #ignorar ambientes virtuais Python
+__pycache__/ #ignorar arquivos compilados do Python
+*.pyc #ignorar arquivos bytecode do Python
+.env.local #ignorar arquivos de configuração de ambiente local
+.env.*.local #ignorar outros arquivos de configuração de ambiente local
+*.sqlite3 #ignorar arquivos de banco de dados SQLite
+
+
