@@ -4,12 +4,6 @@ Aplicação full-stack para classificar e analisar e-mails utilizando um provedo
 - Backend em Python (lógica de classificação e integração com provedor de IA)
 - Frontend em TypeScript/Next.js (interface web)
 
-Repositório: [VitorManuel01/classificacao_email_ia](https://github.com/VitorManuel01/classificacao_email_ia)
-
-- Linguagens:
-    - Python (~93.6%)
-    - TypeScript (~6.4%)
-
 ## Sumário
 - [Arquitetura](#arquitetura)
 - [Estrutura do Repositório](#estrutura-do-repositório)
@@ -31,6 +25,32 @@ Repositório: [VitorManuel01/classificacao_email_ia](https://github.com/VitorMan
     - Implementa a lógica de classificação e a integração com o provedor de IA.
     - Código principal em [backend/main.py](https://github.com/VitorManuel01/classificacao_email_ia/blob/master/backend/main.py).
     - Integração com IA em [backend/ai_provider.py](https://github.com/VitorManuel01/classificacao_email_ia/blob/master/backend/ai_provider.py).
+# Classificação de Email com IA
+
+Este projeto utiliza técnicas de Processamento de Linguagem Natural (NLP) para classificar emails automaticamente usando inteligência artificial.
+
+Para acessar a aplicação, visite: [Classificação de Email com IA](https://classificacao-email-ia.vercel.app/)
+
+## Práticas de NLP
+
+As principais práticas de NLP estão implementadas em [backend/nlp.py](https://github.com/VitorManuel01/classificacao_email_ia/blob/master/backend/nlp.py).
+
+## Como instalar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/VitorManuel01/classificacao_email_ia.git
+   cd classificacao_email_ia
+   ```
+2. Instale as dependências (requer Python 3.8+):
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Como usar
+
+Execute o script principal para classificar emails:
+.py)
     - Dependências em [backend/requirements.txt](https://github.com/VitorManuel01/classificacao_email_ia/blob/master/backend/requirements.txt).
 
 - Frontend (Next.js + TypeScript)
@@ -52,6 +72,7 @@ Repositório: [VitorManuel01/classificacao_email_ia](https://github.com/VitorMan
 ├─ backend/
 │  ├─ ai_provider.py
 │  ├─ main.py
+│  ├─ nlp.py  
 │  ├─ requirements.txt
 │  └─ .gitignore
 ├─ frontend/

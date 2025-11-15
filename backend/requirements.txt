@@ -7,3 +7,7 @@ flask-cors
 PyPDF2
 gunicorn
 waitress
+spacy
+scikit-learn
+joblib
+pandas
