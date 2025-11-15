@@ -5,3 +5,5 @@ google-genai
 flask
 flask-cors
 PyPDF2
+gunicorn
+waitress

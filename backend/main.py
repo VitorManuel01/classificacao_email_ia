@@ -5,6 +5,7 @@ import os
 import json
 from io import BytesIO
 from PyPDF2 import PdfFileReader, PdfFileWriter
+from waitress import serve
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -77,4 +78,5 @@ def analyse_email_portuguese():
 
 
 if __name__ == "__main__":
-    app.run(port=5000, debug=True)#                     model="gemini-1.5-pro"
+    # Run the Flask app with Waitress for production readiness
+    serve(app, host="0.0.0.0", port=8080)
