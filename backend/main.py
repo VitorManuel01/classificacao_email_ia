@@ -33,7 +33,7 @@ logger = logging.getLogger(__name__)
 # Initialize Flask app
 app = Flask(__name__)
 # Enable CORS
-CORS(app)
+CORS(app, origins="*")
 
 # Initialize AI Provider
 ia = AIProvider(provider="gemini")
@@ -41,20 +41,18 @@ ia = AIProvider(provider="gemini")
 
 # extract text from pdf bytes, necessary for file upload handling
 def extract_text_from_pdf_bytes(b: bytes) -> str:
-    """
-    Tenta extrair texto de bytes de PDF usando PdfReader (PyPDF2 moderna).
-    Faz fallback para PdfFileReader em versões antigas. Retorna string vazia em erro.
-    """
+
+    #try to extract text from PDF bytes using PyPDF2
     try:
         stream = BytesIO(b)
         text_parts = []
 
         if _HAS_PDFREADER is True and 'PdfReader' in globals() and PdfReader is not None:
-            # API moderna
+            #new API
             reader = PdfReader(stream)
             pages = getattr(reader, "pages", None)
             if pages is None:
-                # segurança extra
+                # extra fallback
                 for i in range(len(reader.pages)):
                     page = reader.pages[i]
                     text_parts.append(page.extract_text() or "")
@@ -67,7 +65,7 @@ def extract_text_from_pdf_bytes(b: bytes) -> str:
                         logger.exception("Erro extraindo texto de uma página com PdfReader")
                         continue
         elif _HAS_PDFREADER is False and 'PdfFileReader' in globals() and PdfFileReader is not None:
-            # Fallback para API antiga
+            # fallback
             reader = PdfFileReader(stream)
             num_pages = getattr(reader, "numPages", 0)
             for page_num in range(num_pages):
