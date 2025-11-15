@@ -192,9 +192,18 @@ export default function EmailAnalysisForm() {
                         <span className={styles.helper}>Formatos aceitos: TXT, PDF</span>
                     </div>
 
-                    <button type="submit" className={styles.submitButton} disabled={loading}>
-                        {loading ? "Analisando..." : "Enviar para Análise"}
-                    </button>
+                    <div>
+                        <button type="submit" className={styles.submitButton} disabled={loading}>
+                            {loading ? "Analisando..." : "Enviar para Análise"}
+                        </button>
+
+                        {loading && (
+                            <p className="text-yellow-700 text-sm mt-2">
+                                O servidor está acordando da hibernação (Render Free Tier)... isso pode levar alguns segundos.
+                            </p>
+                        )}
+                    </div>
+
                 </form>
 
                 {error && (file || emailText.trim()) && (
