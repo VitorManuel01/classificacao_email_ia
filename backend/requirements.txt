@@ -1,0 +1,7 @@
+openai
+google-generativeai
+python-dotenv
+google-genai
+flask
+flask-cors
+PyPDF2
