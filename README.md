@@ -30,6 +30,7 @@ Aplicação full-stack para classificar e analisar e-mails utilizando um provedo
 Este projeto utiliza técnicas de Processamento de Linguagem Natural (NLP) para classificar emails automaticamente usando inteligência artificial.
 
 Para acessar o vídeo de apresentação, visite: [Classificação de Email via IA - FullStack - Next.Js | Typescript | Python](https://www.youtube.com/watch?v=z4vGtRVMOk0)
+
 Para acessar a aplicação, visite: [Classificação de Email com IA](https://classificacao-email-ia.vercel.app/)
 
 ## Práticas de NLP
