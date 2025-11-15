@@ -79,4 +79,5 @@ def analyse_email_portuguese():
 
 if __name__ == "__main__":
     # Run the Flask app with Waitress for production readiness
-    serve(app, host="0.0.0.0", port=8080)
+
+    serve(app, host="0.0.0.0", port=5000)

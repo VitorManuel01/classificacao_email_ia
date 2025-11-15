@@ -1,0 +1,253 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+.card {
+  background: var(--background);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 2rem;
+  width: 100%;
+  max-width: 720px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.helper {
+  font-size: 0.75rem;
+  color: var(--gray-600);
+}
+
+.inputError {
+  border-color: var(--error) !important;
+}
+
+.error {
+  font-size: 0.75rem;
+  color: var(--error);
+  margin-top: 0.25rem;
+}
+
+.errorAlert {
+  margin-top: 1.5rem;
+  padding: 0.875rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--error);
+  border-radius: var(--radius);
+  color: var(--error);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.875rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.resultSection {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--gray-50);
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+}
+
+.resultTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 0 0 1rem 0;
+}
+
+.resultItem {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.resultLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.resultValue {
+  font-size: 1rem;
+  color: var(--gray-900);
+  padding: 0.5rem;
+  background: white;
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+}
+
+.resultBox {
+  white-space: pre-wrap;
+  padding: 1rem;
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--gray-900);
+}
+
+@media (min-width: 640px) {
+  .card {
+    padding: 2.5rem;
+  }
+
+  .title {
+    font-size: 1.875rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .resultItem {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .resultLabel {
+    min-width: 140px;
+  }
+
+  .resultValue {
+    flex: 1;
+  }
+}
+
+.fileInput {
+  display: none;
+}
+
+.fileButton {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: var(--background);
+  color: var(--primary);
+  border: 2px dashed var(--gray-200);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.fileButton:hover {
+  border-color: var(--primary);
+  background: rgba(102, 126, 234, 0.05);
+  transform: translateY(-1px);
+}
+
+.fileIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.filePreview {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  margin-top: 0.5rem;
+}
+
+.filePreviewIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.fileName {
+  flex: 1;
+  font-size: 0.875rem;
+  color: var(--gray-900);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.removeButton {
+  padding: 0.25rem;
+  background: transparent;
+  color: var(--error);
+  border-radius: 4px;
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.removeButton:hover {
+  background: rgba(239, 68, 68, 0.1);
+  transform: none;
+}
+
+.removeButton svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+}
